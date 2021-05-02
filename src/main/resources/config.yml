@@ -1,0 +1,12 @@
+settings:
+  activity:
+    type: "PLAYING" #PLAYING, LISTENING, WATCHING, STREAMING
+    text: "Minecraft"
+  bot-token: "<------------- BOT TOKEN GOES HERE ------------->"
+  guild-id: "<------------- GUILD ID GOES HERE ------------->"
+  waiting-channel: "<------------- WAITING CHANNEL ID HERE ------------->"
+  voice-channels:
+    1:
+      id: "<------------- CHANNEL ID HERE ------------->"
+    2:
+      id: "<------------- CHANNEL ID HERE ------------->"

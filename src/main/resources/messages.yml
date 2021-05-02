@@ -1,0 +1,42 @@
+messages:
+  only-players: "&cOnly players can use this command."
+  invalid-number: "&cPlease enter a valid number."
+  could-not-move: "&cCouldn't move you to the voice channel. Try again or report this to the administration team."
+  commands:
+    unlink:
+      unlinked: "&eYou have unlinked your discord profile."
+      not-linked: "&eYour account is not linked to a discord profile."
+    accept-link:
+      accept-button: "&a&l[ACCEPT]"
+      request: #Placeholders: %user%, %accept% (Used for the accept button)
+        centered: true
+        text:
+          - ""
+          - "&6&lLINK REQUEST"
+          - "&eThe discord user &6%user% &ehas requested to"
+          - "&elink their profile with your account."
+          - "&eIf this is you requesting click the accept button below."
+          - "&8You have 60 seconds to accept it."
+          - ""
+          - "%accept%"
+          - ""
+      usage: "&fUsage: &e/acceptlink <discord-id>"
+      not-requested: "&cThere is no active request from this discord user."
+      already-linked: "&eYour account is already linked to &6%user%." #Placeholders: %user%
+      accepted: "&eYour account is now linked to the discord user &6%user%&e." #Placeholders: %user%
+    voice-channel:
+      usage: "&fUsage: &e/voicechannel [number]"
+      not-linked: "&eYour account is not linked to a discord profile."
+      channel-does-not-exist: "&eThis channel does not exist."
+      not-waiting: "&eYour are not on the waiting channel."
+      already-on-channel: "&eYou are already connected to that channel."
+      moved-to-channel: "&eMoving you to the channel &6%number%&e." #Placeholders: %number%
+      not-connected: "&eYour are not on the connected to a channel."
+      already-on-waiting: "&eYou are already on the waiting channel."
+      moved-to-waiting: "&eMoving you to the waiting channel..."
+  discord-commands:
+    link:
+      usage: "Usage: !link <player-name>"
+      not-online: "This player is not online!"
+      already-linked: "This player is already linked to another profile."
+      sent-request: "A request have been sent to the player **%player%**. They have 60 seconds to accept it." #Placeholders: %player%

@@ -1,0 +1,12 @@
+name: EonVC
+author: ACrispyCookie
+version: 1.0
+main: me.acrispycookie.eonvc.Main
+commands:
+  acceptlink:
+    description: Accept a discord link request.
+  voicechannel:
+    description: Connect to a voice channel.
+    aliases: [vc]
+  unlink:
+    description: Unlink your discord profile.
