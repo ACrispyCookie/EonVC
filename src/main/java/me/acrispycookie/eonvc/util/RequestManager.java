@@ -37,7 +37,7 @@ public class RequestManager {
 
     public LinkRequest get(UUID uuid, String discordId){
         for(LinkRequest request : requests){
-            if(request.getDiscordId() == discordId && request.getUuid().equals(uuid)){
+            if(request.getDiscordId().equalsIgnoreCase(discordId) && request.getUuid().equals(uuid)){
                 return request;
             }
         }
