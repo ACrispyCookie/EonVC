@@ -1,5 +1,6 @@
 package me.acrispycookie.eonvc;
 
+import me.acrispycookie.eonvc.discord.commands.AutoDeafenListener;
 import me.acrispycookie.eonvc.discord.commands.LinkCommand;
 import me.acrispycookie.eonvc.ingame.commands.AcceptLinkCommand;
 import me.acrispycookie.eonvc.ingame.commands.UnlinkCommand;
@@ -52,6 +53,7 @@ public class Main extends JavaPlugin {
 
     @Override
     public void onDisable(){
+        bot.shutdown();
         Bukkit.getLogger().info("EonVC has been disabled!");
     }
 
@@ -94,6 +96,7 @@ public class Main extends JavaPlugin {
 
     private void initializeCommands(){
         bot.addEventListener(new LinkCommand(this));
+        bot.addEventListener(new AutoDeafenListener(this));
         this.getCommand("voicechannel").setExecutor(new VoiceChannelCommand(this));
         this.getCommand("acceptlink").setExecutor(new AcceptLinkCommand(this));
         this.getCommand("unlink").setExecutor(new UnlinkCommand(this));
@@ -125,10 +128,6 @@ public class Main extends JavaPlugin {
 
     public Member getMember(String discordId){
         return bot.getGuildById(configManager.getString("settings.guild-id")).getMember(getUser(discordId));
-    }
-
-    public void disconnect(String discordId){
-        bot.getGuildById(configManager.getString("settings.guild-id")).getMember(getUser(discordId)).kick().queue();
     }
 
     public VoiceChannel getVoiceChannel(String discordId){
